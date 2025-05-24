@@ -1,4 +1,7 @@
-div #content {
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+div#content {
 max-width: 1600px;
 margin: 0 auto;
 }
@@ -6,8 +9,13 @@ nav a {
   text-align: center;
   text-decoration: none;
   background-color: #ade8f4;
-  color: #0077b6;           
+  color: #0077b6;       
+  padding: 35px;    
 
+}
+
+#logo_link {
+  padding-top: 5px;
 }
 
 #hero-msg h1, #hero-msg h4 {
@@ -25,9 +33,18 @@ main section {
 #background {
     height: 725px;
 }
+
+main section img {
+  box-sizing: border-box; /* Include border and padding in image size */
+}
+
 body {
   background-color: #ade8f4; 
   color: #0077b6;
+  font-family: 'Montserrat', Arial, Helvetica, sans-serif;
+  font-size: 22px;
+  margin: 0;
+  padding: 0;
 }
 
 header {
@@ -44,6 +61,10 @@ nav a:hover {
   background-color: #48cae4; 
   color: #0077b6;
   text-decoration: none;
+  font-size: 18px;
+  padding: 15px 30px;
+  margin-top: 50px;
+  border-radius: 5px;
 }
 
 .book:hover, .join:hover {
@@ -51,24 +72,40 @@ nav a:hover {
   color: #fff; 
 }
 
+.rivers-card, .camping_card, .rapids-card {
+  margin: 200px 0;
+}
+
 #background {
   background-color: #48cae4; 
 }
 
+.card-img {
+  border: 10px solid #0096c7; /* Use a site color for the border */
+}
+
+
 .msg {
   background-color: #fff; 
   color: #0077b6; 
+  line-height: 1.5em;
+  padding: 35px;
 }
 
 footer {
   background-color: #0077b6;
   color: #fff; 
+  padding: 25px 50px;
+  margin-top: 200px;
 }
 
 
 .home-title {
   background-color: #ade8f4; 
   color: #0096c7;       
+  font-family: 'Funnel Sans', 'Arial Narrow', Arial, sans-serif;
+  font-size: 2em;
+  margin-top: 10px;
 }
 
 h4 {
@@ -85,6 +122,8 @@ h4 {
 .msg p {
   background-color: #fff;  
   color: #0077b6;      
+  line-height: .8em;
+  padding-bottom: 15px;
 }
 
 
@@ -103,6 +142,7 @@ footer a:hover {
 }
 .icon{
     width: 80px;
+    padding-top: 30px;
 }
 #hero-img {
     width: 100%;
@@ -112,4 +152,17 @@ footer p {
 }
 footer p a:hover {
     text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Funnel Sans', 'Arial Narrow', Arial, sans-serif;
+}
+
+h2 {
+  margin: 0;      /* Reset margin */
+}
+
+
+footer .social img {
+  padding-top: 15px;
 }
