@@ -5,7 +5,6 @@
   justify-items: center;
   gap: 20px;
   height: 400px;
-  width: 400px;
 }
 .red1 { 
   width: 100%; 
@@ -34,7 +33,6 @@
 .content2 {
   position: relative;
   height: 400px; 
-  width: 400px;
 }
 .red2 {
   position: absolute;
@@ -69,7 +67,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
-  width: 400px;
 }
 .red3 {
   width: 100%; 
@@ -78,13 +75,13 @@
   grid-column: 1/3;
 } 
 .green3 {
-  width: 230px; 
+  width: 90%; 
   height: 140px; 
   background-color: green;
   justify-self: start;
 } 
 .yellow3 {
-  width: 230px; 
+  width: 90%; 
   height: 140px; 
   background-color: gold; 
   justify-self: end;
@@ -101,7 +98,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   height: 400px;
-  width: 400px;
+  width: 100%;
 
 }
 .red4 {
@@ -136,11 +133,12 @@
 
 .content5 {
   width: 100%;
-  height: 400px;
+  height: 40vw; /* Responsive height based on viewport width */
+  min-height: 300px;
+  max-height: 600px;
   position: relative;
   background: white;
   overflow: hidden;
-  width: 400px;
 }
 
 .red5 {
@@ -152,7 +150,7 @@
 .green5 {
   float: left;
   width: 33.33%;
-  height: 45%;
+  height: 30%;
   background-color: green;
   margin: 0;
 }
@@ -160,12 +158,13 @@
 .yellow5 {
   background-color: gold;
   margin-top: 0;
-  padding: 0 10px;
+  padding: 0 1vw;
   box-sizing: border-box;
-  font-size: 0.75em; 
+  font-size: 1.2vw; /* Responsive font size */
   line-height: 1.1;
   width: 100%;
 }
+
 .blue5 {
   width: 100%;
   height: 15%;
@@ -178,7 +177,6 @@
   width: 600px;
   position: relative;
   margin: 0 auto;
-  width: 400px;
 }
 
 /* Red: Top left, wide but not full width */
