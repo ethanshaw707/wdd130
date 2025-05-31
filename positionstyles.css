@@ -4,6 +4,8 @@
   grid-template-columns: 1fr 1fr;
   justify-items: center;
   gap: 20px;
+  height: 400px;
+  width: 400px;
 }
 .red1 { 
   width: 100%; 
@@ -32,6 +34,7 @@
 .content2 {
   position: relative;
   height: 400px; 
+  width: 400px;
 }
 .red2 {
   position: absolute;
@@ -66,6 +69,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   justify-items: center;
+  width: 400px;
 }
 .red3 {
   width: 100%; 
@@ -97,7 +101,7 @@
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr 1fr;
   height: 400px;
-  width: 100%;
+  width: 400px;
 
 }
 .red4 {
@@ -136,6 +140,7 @@
   position: relative;
   background: white;
   overflow: hidden;
+  width: 400px;
 }
 
 .red5 {
@@ -173,6 +178,7 @@
   width: 600px;
   position: relative;
   margin: 0 auto;
+  width: 400px;
 }
 
 /* Red: Top left, wide but not full width */
