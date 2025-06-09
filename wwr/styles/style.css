@@ -13,7 +13,7 @@ nav a {
   padding: 10px 20px;    
   border-radius: 5px;
   background-color: #48cae4; 
-
+  z-index: 5;
 }
 
 #logo_link {
