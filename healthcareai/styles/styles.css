@@ -1,0 +1,318 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Roboto+Slab:wght@700&display=swap');
+:root {
+  --primary-color: #1976D2;
+  --secondary-color: #43A047;
+  --accent1-color: #FFC107;
+  --accent2-color: #F5F5F5;
+  --heading-font: 'Roboto Slab', serif;
+  --paragraph-font: 'Open Sans', Arial, sans-serif;
+  --headline-color-on-white: #1976D2;
+  --headline-color-on-color: #F5F5F5;
+  --paragraph-color-on-white: #43A047;
+  --paragraph-color-on-color: #F5F5F5;
+  --paragraph-background-color: #1976D2;
+  --nav-link-color: #1976D2;
+  --nav-background-color: #FFC107;
+  --nav-hover-link-color: #F5F5F5;
+  --nav-hover-background-color: #1976D2;
+}
+
+body {
+  margin: 0;
+  padding-top: 0; /* Remove extra padding for fixed header */
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+main {
+  flex: 1;
+}
+header {
+  padding: 1em;
+  text-align: center;
+  color: var(--headline-color-on-color);
+  background-color: var(--paragraph-background-color);
+}
+header > h1, header > h2 {
+  color: var(--headline-color-on-color);
+}
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  padding: 0.7em 0;
+  margin-bottom: 2em;
+}
+nav a {
+  color: #1a3a4f;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+}
+nav a:hover {
+  text-decoration: underline;
+}
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+}
+h2 {
+  text-align: center;
+}
+p, ul, li {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  text-align: left;
+}
+p {
+  padding: 1em 0;
+}
+footer {
+  margin-top: 2em;
+  color: #888;
+  font-size: 0.9em;
+  text-align: center;
+}
+.img-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 2em;
+  margin: 2em 0;
+}
+.img-row img {
+  max-width: 300px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.employment-list {
+  max-width: 700px;
+  margin: 0 auto 2em auto;
+  text-align: left;
+  padding-left: 1.5em;
+}
+.logo {
+  max-width: 120px;
+  margin-bottom: 1em;
+}
+
+.home-hero {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin: 2em 0 3em 0;
+}
+.hero-img img {
+  max-width: 340px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+.hero-text {
+  max-width: 600px;
+  text-align: left;
+}
+.benefits-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2em;
+  margin: 2em 0 3em 0;
+}
+.benefits-text {
+  max-width: 600px;
+  text-align: left;
+}
+.benefits-img img {
+  max-width: 340px;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+}
+/* Header and Footer */
+.full-width-header {
+  width: 100vw;
+  background: #1a3a4f;
+  color: #fff;
+  padding: 0.5em 0;
+  margin-left: calc(-50vw + 50%);
+  position: relative; /* Remove fixed positioning */
+  top: unset;
+  left: unset;
+  z-index: unset;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2em;
+  gap: 2em;
+}
+.logo.left-logo {
+  height: 60px;
+  margin-right: 1.5em;
+}
+.header-titles {
+  flex: 1;
+  min-width: 0;
+}
+.header-titles h1 {
+  margin: 0;
+  font-size: 2.2em;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.header-titles h2 {
+  margin: 0;
+  font-size: 1.1em;
+  font-weight: 400;
+  color: #fff;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+.header-nav {
+  display: flex;
+  gap: 1em;
+  background: none;
+  box-shadow: none;
+  padding: 0;
+  margin: 0;
+}
+.header-nav a {
+  color: #1a3a4f;
+  background: #fff;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 1.1em;
+  padding: 0.4em 1.2em;
+  border-radius: 6px;
+  border: none;
+  transition: background 0.2s, color 0.2s;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+  cursor: pointer;
+  display: inline-block;
+}
+.header-nav a:hover, .header-nav a:focus {
+  background: #1565a0; /* Slightly lighter blue for hover */
+  color: #fff;
+}
+.full-width-footer {
+  width: 100vw;
+  background: #1a3a4f;
+  color: #fff;
+  text-align: center;
+  font-size: 1em;
+  margin-top: 2em;
+  padding: 1em 0 1em 0;
+  position: relative;
+  left: 0;
+  bottom: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+}
+
+/* Remove old nav styling */
+nav:not(.header-nav) {
+  display: none;
+}
+
+/* Main Application Section */
+.application-hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fff;
+  border: 1.5px solid #b3c6d9;
+  border-radius: 12px;
+  max-width: 1100px;
+  margin: 2em auto;
+  padding: 2em 1.5em 2.5em 1.5em;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+}
+.application-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3em;
+  width: 100%;
+  margin-bottom: 2em;
+}
+.application-card {
+  background: none;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: unset;
+  text-align: left;
+  gap: 0;
+}
+.application-card-img {
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin-bottom: 1em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+.application-card-img img {
+  max-width: 320px;
+  width: 100%;
+  height: auto;
+  margin-bottom: 0;
+  border-radius: 8px;
+  box-shadow: none;
+}
+.application-card-content {
+  background: #f7fafc;
+  border: 1.5px solid #b3c6d9;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.5em 1.2em;
+  width: 100%;
+  text-align: left;
+  margin-bottom: 2em;
+  margin-left: 0.5em;
+  margin-right: 0.5em;
+}
+@media (max-width: 900px) {
+  .application-grid {
+    grid-template-columns: 1fr;
+    gap: 1.2em;
+  }
+  .application-card-img, .application-card-content {
+    padding: 1em 0.5em;
+  }
+  .application-card-content {
+    text-align: center;
+    margin-bottom: 1.2em;
+    margin-left: 0;
+    margin-right: 0;
+  }
+  .application-hero {
+    padding: 1em 0.2em;
+  }
+}
+
+/* Hide old rows for this page */
+.application-row, .wearable-section, .smartwatch-row {
+  display: none !important;
+}
+
+/* Home Page Text Boxes */
+.home-hero .hero-text, .benefits-section .benefits-text {
+  background: #f7fafc;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  border: 1.5px solid #b3c6d9;
+  padding: 1.5em 2em;
+  margin-bottom: 1.5em;
+}
