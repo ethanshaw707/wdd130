@@ -194,7 +194,6 @@ footer {
   font-family: 'Segoe UI', Arial, sans-serif;
   box-shadow: 0 1px 4px rgba(0,0,0,0.04);
   cursor: pointer;
-  display: inline-block;
 }
 .header-nav a:hover, .header-nav a:focus {
   background: #1565a0; /* Slightly lighter blue for hover */
@@ -315,4 +314,43 @@ nav:not(.header-nav) {
   border: 1.5px solid #b3c6d9;
   padding: 1.5em 2em;
   margin-bottom: 1.5em;
+}
+
+/* Style the form element with a border around it */
+form {
+  border: 4px solid var(--accent2-color);
+}
+
+/* Add some padding and a grey background color to containers */
+.container {
+  padding: 20px;
+  background-color: var(--accent2-color);
+}
+
+/* Style the input elements and the submit button */
+input[type=text], input[type=submit] {
+  width: 100%;
+  padding: 12px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid var(--primary-color);
+  box-sizing: border-box;
+}
+
+/* Add margins to the checkbox */
+input[type=checkbox] {
+  margin-top: 16px;
+}
+
+/* Style the submit button */
+input[type=submit] {
+  background-color: var(--secondary-color);
+  color: var(--headline-color-on-color);
+  border: none;
+}
+
+input[type=submit]:hover {
+  opacity: 0.8;
+  background-color: var(--primary-color);
+  color: var(--headline-color-on-color);
 }

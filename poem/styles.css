@@ -1,0 +1,59 @@
+section {
+    width: 50%;
+    /* Remove margin between sections and padding inside */
+    margin: 0;
+    border: 1px solid #222;
+    background: #fff;
+    position: relative;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.block1 {
+    margin-left: 0;
+    margin-right: auto;
+}
+
+.block2 {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.block3 {
+    margin-left: auto;
+    margin-right: 0;
+}
+
+.block4 {
+    margin-left: auto;
+    margin-right: auto;
+    width: 60%;
+}
+
+/* Remove spacing between sections */
+section + section {
+    margin-top: 0;
+}
+
+/* Paragraph alignment for blocks 1, 2, 3 */
+section:not(.block4) p:nth-of-type(1) {
+    text-align: left;
+}
+section:not(.block4) p:nth-of-type(2) {
+    text-align: center;
+}
+section:not(.block4) p:nth-of-type(3) {
+    text-align: right;
+}
+
+/* Paragraph alignment for block 4 */
+.block4 p:nth-of-type(1) {
+    text-align: right;
+}
+.block4 p:nth-of-type(2) {
+    text-align: center;
+}
+.block4 p:nth-of-type(3),
+.block4 p:nth-of-type(4) {
+    text-align: left;
+}
