@@ -316,41 +316,231 @@ nav:not(.header-nav) {
   margin-bottom: 1.5em;
 }
 
-/* Style the form element with a border around it */
-form {
-  border: 4px solid var(--accent2-color);
+/* --- New Top Image and Title Section --- */
+.top-image-title-section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
+  margin-bottom: 2em;
+  position: relative;
+}
+.title-over-image {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.page-title {
+  position: absolute;
+  top: -1.2em;
+  left: 50%;
+  transform: translate(-50%, 0);
+  background: rgba(255,255,255,0.95);
+  padding: 0.2em 2.5em;
+  border-radius: 1.2em;
+  font-size: 2em;
+  z-index: 2;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  white-space: nowrap;
+  min-width: 520px;
+  text-align: center;
+}
+.top-center-image-wrapper {
+  width: 600px;
+  max-width: 98vw;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  position: relative;
+  z-index: 1;
+}
+.top-center-image {
+  width: 600px;
+  max-width: 98vw;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  margin-top: 2.2em;
+  margin-bottom: 0.5em;
+}
+@media (max-width: 700px) {
+  .page-title, .top-center-image-wrapper, .top-center-image {
+    min-width: unset;
+    width: 98vw;
+    max-width: 98vw;
+    font-size: 1.2em;
+    padding: 0.2em 0.5em;
+  }
 }
 
-/* Add some padding and a grey background color to containers */
+/* --- Side-by-Side Text Boxes with Overlapping Images --- */
+.side-by-side-section {
+  display: flex;
+  justify-content: center;
+  gap: 8em; /* Even more space between boxes/images */
+  margin-bottom: 3em;
+  flex-wrap: wrap;
+}
+.side-box {
+  background: #fff;
+  border: 1.5px solid transparent;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  width: 520px; /* Wider boxes */
+  min-width: 320px;
+  max-width: 98vw;
+  margin: 1em 0;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 0;
+}
+.side-box-img-wrapper {
+  position: relative;
+  top: -30px;
+  left: 0;
+  transform: none;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  height: auto;
+  margin-bottom: -20px;
+}
+.side-box-img {
+  width: 260px;
+  max-width: 90vw;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border: none;
+  background: none;
+  margin: 0 auto;
+}
+.side-box-content {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: none;
+  border: none;
+  box-shadow: none;
+}
+
+ .side-box-img-wrapper,
+ .side-box-img-wrapper.half-out {
+  position: static;
+  z-index: 2;
+  width: 100%;
+  max-width: 100vw;
+  height: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  pointer-events: none;
+  margin: 0 0 -20px 0;
+}
+
+.side-box-img,
+.side-box-img.large-image {
+  width: 520px;
+  max-width: 100vw;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+  border: none;
+  background: none;
+  margin: 0 auto;
+  position: relative;
+  top: 35px;
+  pointer-events: auto;
+  transition: width 0.2s, max-width 0.2s;
+}
+/* Center and limit width of the newsletter form */
+form {
+  max-width: 420px;
+  margin: 2.5em auto 2em auto;
+  border: 4px solid var(--accent2-color);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+  display: block;
+}
 .container {
   padding: 20px;
   background-color: var(--accent2-color);
-}
-
-/* Style the input elements and the submit button */
-input[type=text], input[type=submit] {
+  border-radius: 10px;
   width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid var(--primary-color);
   box-sizing: border-box;
 }
-
-/* Add margins to the checkbox */
-input[type=checkbox] {
-  margin-top: 16px;
+@media (max-width: 1200px) {
+  .side-box {
+    width: 98vw;
+    min-width: unset;
+    max-width: 99vw;
+  }
+  .side-box-img-wrapper,
+  .side-box-img-wrapper.half-out {
+    width: 100%;
+    max-width: 99vw;
+    margin: 0 0 -20px 0;
+    height: auto;
+  }
+  .side-box-img,
+  .side-box-img.large-image {
+    width: 90vw;
+    max-width: 99vw;
+  }
 }
-
-/* Style the submit button */
-input[type=submit] {
-  background-color: var(--secondary-color);
-  color: var(--headline-color-on-color);
-  border: none;
+@media (max-width: 900px) {
+  .side-by-side-section {
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+  }
+  .side-box {
+    width: 99vw;
+    min-width: unset;
+    max-width: 99vw;
+  }
+  .side-box-img-wrapper,
+  .side-box-img-wrapper.half-out {
+    width: 100%;
+    max-width: 99vw;
+    margin: 0 0 -20px 0;
+    height: auto;
+    left: unset;
+    transform: none;
+  }
+  .side-box-img,
+  .side-box-img.large-image {
+    width: 98vw;
+    max-width: 99vw;
+    top: 35px;
+  }
 }
-
-input[type=submit]:hover {
-  opacity: 0.8;
-  background-color: var(--primary-color);
-  color: var(--headline-color-on-color);
+.text-card {
+  background: #f7fafc;
+  border: 1.5px solid transparent;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+  padding: 1.2em 1.5em 1.5em 1.5em;
+  margin-bottom: 1.5em;
+  margin-top: 1.5em;
+  text-align: center;
+}
+.text-card:first-child {
+  margin-top: 2.5em;
+}
+.text-card h2, .text-card h3 {
+  margin-top: 0.5em;
+  margin-bottom: 0.7em;
+}
+/* Add space between image and first text card */
+.side-box-img-wrapper.half-out + .side-box-content .text-card:first-child {
+  margin-top: 2.8em;
 }
