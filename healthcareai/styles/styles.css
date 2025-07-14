@@ -243,6 +243,7 @@ nav:not(.header-nav) {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-left: 40px;
 }
 .application-grid-img img {
   width: 100%;
