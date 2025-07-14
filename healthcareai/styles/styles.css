@@ -19,7 +19,7 @@
 
 body {
   margin: 0;
-  padding-top: 0; /* Remove extra padding for fixed header */
+  padding-top: 0; 
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -130,14 +130,14 @@ footer {
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
 }
-/* Header and Footer */
+
 .full-width-header {
   width: 100vw;
   background: #1a3a4f;
   color: #fff;
   padding: 0.5em 0;
   margin-left: calc(-50vw + 50%);
-  position: relative; /* Remove fixed positioning */
+  position: relative; 
   top: unset;
   left: unset;
   z-index: unset;
@@ -196,7 +196,7 @@ footer {
   cursor: pointer;
 }
 .header-nav a:hover, .header-nav a:focus {
-  background: #1565a0; /* Slightly lighter blue for hover */
+  background: #1565a0;
   color: #fff;
 }
 .full-width-footer {
@@ -213,100 +213,76 @@ footer {
   font-family: 'Segoe UI', Arial, sans-serif;
 }
 
-/* Remove old nav styling */
+
 nav:not(.header-nav) {
   display: none;
 }
 
-/* Main Application Section */
+
 .application-hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   background: #fff;
-  border: 1.5px solid #b3c6d9;
   border-radius: 12px;
-  max-width: 1100px;
+  max-width: 1200px;
   margin: 2em auto;
   padding: 2em 1.5em 2.5em 1.5em;
   box-shadow: 0 2px 12px rgba(0,0,0,0.04);
 }
-.application-grid {
+.application-custom-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 3em;
+  grid-template-rows: repeat(3, auto);
+  gap: 2em;
   width: 100%;
-  margin-bottom: 2em;
+  max-width: 1100px;
+  margin: 0 auto 2em auto;
 }
-.application-card {
-  background: none;
-  border: none;
-  box-shadow: none;
-  padding: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  min-height: unset;
-  text-align: left;
-  gap: 0;
-}
-.application-card-img {
-  background: none;
-  border: none;
-  border-radius: 0;
-  box-shadow: none;
-  padding: 0;
-  margin-bottom: 1em;
+.application-grid-img {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 100%;
 }
-.application-card-img img {
+.application-grid-img img {
+  width: 100%;
   max-width: 320px;
-  width: 100%;
-  height: auto;
-  margin-bottom: 0;
-  border-radius: 8px;
-  box-shadow: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
 }
-.application-card-content {
-  background: #f7fafc;
+.application-grid-text {
+  background: transparent;
   border: 1.5px solid #b3c6d9;
   border-radius: 10px;
   box-shadow: 0 2px 8px rgba(0,0,0,0.07);
   padding: 1.5em 1.2em;
-  width: 100%;
   text-align: left;
-  margin-bottom: 2em;
-  margin-left: 0.5em;
-  margin-right: 0.5em;
+  margin: 0;
+  width: 100%;
 }
 @media (max-width: 900px) {
-  .application-grid {
+  .application-custom-grid {
     grid-template-columns: 1fr;
+    grid-template-rows: none;
     gap: 1.2em;
   }
-  .application-card-img, .application-card-content {
-    padding: 1em 0.5em;
+  .application-grid-img img {
+    max-width: 98vw;
   }
-  .application-card-content {
+  .application-grid-text {
     text-align: center;
     margin-bottom: 1.2em;
-    margin-left: 0;
-    margin-right: 0;
   }
   .application-hero {
     padding: 1em 0.2em;
   }
 }
 
-/* Hide old rows for this page */
 .application-row, .wearable-section, .smartwatch-row {
   display: none !important;
 }
 
-/* Home Page Text Boxes */
+
 .home-hero .hero-text, .benefits-section .benefits-text {
   background: #f7fafc;
   border-radius: 10px;
@@ -316,7 +292,6 @@ nav:not(.header-nav) {
   margin-bottom: 1.5em;
 }
 
-/* --- New Top Image and Title Section --- */
 .top-image-title-section {
   width: 100%;
   display: flex;
@@ -374,11 +349,10 @@ nav:not(.header-nav) {
   }
 }
 
-/* --- Side-by-Side Text Boxes with Overlapping Images --- */
 .side-by-side-section {
   display: flex;
   justify-content: center;
-  gap: 8em; /* Even more space between boxes/images */
+  gap: 8em; 
   margin-bottom: 3em;
   flex-wrap: wrap;
 }
@@ -387,7 +361,7 @@ nav:not(.header-nav) {
   border: 1.5px solid transparent;
   border-radius: 14px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.04);
-  width: 520px; /* Wider boxes */
+  width: 520px; 
   min-width: 320px;
   max-width: 98vw;
   margin: 1em 0;
@@ -460,7 +434,7 @@ nav:not(.header-nav) {
   pointer-events: auto;
   transition: width 0.2s, max-width 0.2s;
 }
-/* Center and limit width of the newsletter form */
+
 form {
   max-width: 420px;
   margin: 2.5em auto 2em auto;
@@ -540,7 +514,7 @@ form {
   margin-top: 0.5em;
   margin-bottom: 0.7em;
 }
-/* Add space between image and first text card */
+
 .side-box-img-wrapper.half-out + .side-box-content .text-card:first-child {
   margin-top: 2.8em;
 }
